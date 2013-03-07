@@ -1,0 +1,10 @@
+*~
+.DS_Store
+UserInterfaceState.xcuserstate
+*.xcsettings
+*.xcbkptlist
+gpsTracking.xcodeproj/xcuserdata
+
+# Although we no longer use SVN at work and I personally don't use it myself
+# this will prevent those directories from appearing in the Git repos
+.svn
