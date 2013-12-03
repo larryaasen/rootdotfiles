@@ -15,6 +15,9 @@ alias gs='git status'
 alias gsub='git submodule'
 alias gsubup='git submodule update'
 
+# Python
+alias py='python'
+
 # Make grep more user friendly by highlighting matches
 # and exclude grepping through .svn folders.
 alias grep='grep --color=auto --exclude-dir=\.svn'
