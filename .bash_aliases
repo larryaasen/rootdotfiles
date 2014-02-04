@@ -17,6 +17,7 @@ alias gsubup='git submodule update'
 
 # Python
 alias py='python'
+alias rmpyc='rm -f `find * | grep "\.pyc"`'
 
 # Make grep more user friendly by highlighting matches
 # and exclude grepping through .svn folders.
