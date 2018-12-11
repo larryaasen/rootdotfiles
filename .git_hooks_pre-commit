@@ -1,0 +1,22 @@
+#!/bin/bash
+
+DARTFMT=/Applications/flutter/bin/cache/dart-sdk/bin/dartfmt
+
+if which $DARTFMT >/dev/null; then
+    echo "dartfmt is installed"
+else
+    echo "warning: dartfmt not installed"
+    exit 1
+fi
+
+DARTFMT_OUTPUT=`$DARTFMT -n ./lib ./test ./example`
+
+if [ -n "$DARTFMT_OUTPUT" ]; then
+  echo "dartfmt found formatting errors in the files below:"
+  echo $DARTFMT_OUTPUT
+  echo "Re-attempt commit."
+  exit 1
+else
+  echo "All Dart files formatted correctly. Yay!"
+  exit 0
+fi
